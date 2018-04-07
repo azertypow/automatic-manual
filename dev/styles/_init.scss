@@ -1,0 +1,68 @@
+@import "params";
+
+@media screen {
+  body {
+    transform: scale3d(0.5, 0.5, 1);
+    transform-origin: top left;
+  }
+
+  [class*="page"] {
+    border: solid 1px black;
+  }
+}
+
+@page {
+  size: $document-width $document-height;
+  margin: 0;
+}
+
+html,
+body {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Akzidenz-Grotesk", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 9pt;
+}
+
+[class*="page"] {
+  @extend html;
+  height: $document-height;
+  width: $document-width;
+  padding: $document-padding;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+ol {
+  font-family: "Cira";
+}
+
+.right-list {
+  text-align: right;
+  line-height: 3em;
+  font-size: 1.5em;
+}
+
+[class*="image-scenario"] {
+  margin-bottom: 20pt;
+  height: calc(50% - 20pt);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.image-description {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  line-height: 20pt;
+  transform: translate3d(0, 100%, 0);
+  text-align: right;
+}

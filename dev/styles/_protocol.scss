@@ -1,0 +1,27 @@
+.random-protocol-container {
+  columns: 2;
+  column-gap: 1cm;
+  width: 10cm;
+}
+
+.protocol-container {
+  break-inside: avoid;
+  position: relative;
+  overflow: hidden;
+
+  + .protocol-container {
+    margin-top: 4em;
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  p+p {
+    margin-top: 1em;
+  }
+}

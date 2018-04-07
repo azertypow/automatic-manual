@@ -1,0 +1,47 @@
+@import "./params";
+
+.page-1 {
+  .title {
+    margin-top: 40pt;
+    text-align: center;
+  }
+}
+
+.page-3 {
+  text-align: right;
+
+  .sub-title {
+    font-size: 3em;
+  }
+
+  ol {
+    margin-top: 4em;
+  }
+
+  .footer-note {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.5em;
+    box-sizing: border-box;
+    padding: $document-padding;
+  }
+}
+
+.page-5 {
+  ol{
+    margin-top: 8em;
+  }
+
+  p.main {
+    columns: 2;
+    padding: $document-padding;
+    padding-left: 2.5cm;
+    column-gap: 10mm;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}

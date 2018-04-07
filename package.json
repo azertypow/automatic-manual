@@ -1,0 +1,14 @@
+{
+  "name": "automatic-manual",
+  "version": "0.0.1",
+  "description": "automatic manual for design hack",
+  "main": "dist/index.html",
+  "repository": "empty",
+  "author": "juliette et nico",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.8.3",
+    "parcel-bundler": "^1.7.0",
+    "typescript": "^2.8.1"
+  }
+}
