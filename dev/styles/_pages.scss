@@ -1,21 +1,44 @@
 @import "./params";
 
+@mixin disable-page-counter {
+  &:after {
+    display: none;
+  }
+}
+
 .page-1 {
   .title {
     margin-top: 40pt;
     text-align: center;
+    margin-bottom: -1pt;
   }
+  h2 {
+    margin-top: 0;
+    text-align: center;
+  }
+  .code-barre {
+    width: 30mm;
+    height: auto;
+    transform: translate(215pt, -24pt);
+  }
+
+  @include disable-page-counter;
+}
+
+.page-2 {
+  @include disable-page-counter;
 }
 
 .page-3 {
+  counter-reset: page-counter 0;
   text-align: right;
+
+  h1 {
+    font-family: "Akzidenz-Grotesk-medium";
+  }
 
   .sub-title {
     font-size: 3em;
-  }
-
-  ol {
-    margin-top: 4em;
   }
 
   .footer-note {
@@ -24,16 +47,21 @@
     bottom: 0;
     width: 100%;
     text-align: center;
-    font-size: 0.5em;
+    font-size: 7pt;
     box-sizing: border-box;
     padding: $document-padding;
+
+    .icon-read {
+      width: 4mm;
+      vertical-align: middle;
+      margin-right: 1em;
+      margin-bottom: 0.3em;
+    }
   }
 }
 
-.page-5 {
-  ol{
-    margin-top: 8em;
-  }
+.page-5,
+.page-23 {
 
   p.main {
     columns: 2;
@@ -42,6 +70,11 @@
     column-gap: 10mm;
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
   }
+}
+
+.page-25,
+.page-26 {
+  @include disable-page-counter;
 }

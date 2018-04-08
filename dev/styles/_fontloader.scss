@@ -1,9 +1,22 @@
 @font-face {
+  font-family: "Akzidenz-Grotesk-medium";
+  src: url("../fonts/BERTHOLD_AKZIDENS_GROTESK/berthold-akzidenz-grotesk-medium.otf");
+}
+@font-face {
   font-family: "Akzidenz-Grotesk";
-  src: url("../fonts/Akzidenz-Grotesk_BQ/AkzidenzGrotesk-Regular.otf");
+  src: url("../fonts/BERTHOLD_AKZIDENS_GROTESK/Berthold.otf");
+}
+@font-face {
+  font-family: "Akzidenz-Grotesk-light";
+  src: url("../fonts/BERTHOLD_AKZIDENS_GROTESK/berthold-light.otf");
 }
 
 @font-face {
   font-family: "Cira";
-  src: url("../fonts/Cira.Serif/Cira.Serif/CiraSerif-Black.ttf");
+  src: url("../fonts/Cira.Serif/Cira.Serif/CiraSerif-Bold.ttf");
+}
+
+@font-face {
+  font-family: "GT-America-medium";
+  src: url("../fonts/GT-America/GT-America-Light.ttf");
 }

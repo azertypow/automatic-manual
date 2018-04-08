@@ -2,8 +2,8 @@
 
 @media screen {
   body {
-    transform: scale3d(0.5, 0.5, 1);
-    transform-origin: top left;
+    //transform: scale3d(0.5, 0.5, 1);
+    //transform-origin: top left;
   }
 
   [class*="page"] {
@@ -24,19 +24,48 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Akzidenz-Grotesk", sans-serif;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: auto !important;
   font-size: 9pt;
 }
 
 [class*="page"] {
   @extend html;
-  height: $document-height;
+  height: calc( 21cm - 2px);
+  page-break-after: always;
   width: $document-width;
   padding: $document-padding;
+  counter-increment: page-counter 1;
+
+  &:after {
+    content: counter(page-counter);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    font-size: 8pt;
+    padding: 1cm;
+    line-height: 0;
+    box-sizing: border-box;
+  }
 }
 
 h1 {
   font-size: 3em;
+  font-family: "Akzidenz-Grotesk-medium";
+}
+
+h2 {
+  font-size: 16pt;
+  font-weight: 400;
+}
+
+h2.variante {
+  font-family: "Cira";
+}
+
+h4 {
+  font-family: "Akzidenz-Grotesk-medium";
 }
 
 ol {
@@ -45,8 +74,33 @@ ol {
 
 .right-list {
   text-align: right;
-  line-height: 3em;
-  font-size: 1.5em;
+  line-height: 2.5em;
+  font-size: 16pt;
+  list-style: none;
+  counter-reset: list 0;
+
+  li {
+    padding-right: 13mm;
+    position: relative;
+    counter-increment: list 1;
+    display: inline-block;
+    &:after {
+      content: counter(list);
+      border: solid 0.35pt black;
+      border-radius: 100%;
+      position: absolute;
+      display: inline-block;
+      font-size: 10pt;
+      height: 1.4em;
+      line-height: 1.5em;
+      width: 1.8em;
+      text-align: center;
+      right: 0;
+      box-sizing: border-box;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
 }
 
 [class*="image-scenario"] {
@@ -65,4 +119,34 @@ ol {
   line-height: 20pt;
   transform: translate3d(0, 100%, 0);
   text-align: right;
+}
+
+.espace-fine {
+  display: inline-block;
+  width: 0.1em;
+}
+
+p {
+  .line {
+    display: block;
+  }
+}
+
+.list-right-style {
+  position: absolute;
+  top: 3cm;
+  right: 1cm;
+}
+
+.text-barre {
+  &:before {
+    content: "";
+    width: calc(100% - 13mm);
+    top: 50%;
+    transform: translate(0, -1pt);
+    height: 0.3mm;
+    background: black;
+    position: absolute;
+    display: block;
+  }
 }
