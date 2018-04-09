@@ -3,3 +3,4 @@ dist/
 documents/
 .idea/
 node_modules/
+yarn-error.log
