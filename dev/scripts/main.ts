@@ -1,13 +1,30 @@
 const protocolQuantity = 48;
 const instructionQuantityInProtocol = 3;
+const protocolInPageQuantity = 8;
 
 declare function require (url: string): void;
 
 const dataInstructions = require("./instructions.json");
 
-for (let instruction of dataInstructions) {
-    console.log(instruction);
+const indexArray = [];
+for (let i = 0; i < dataInstructions.length; i++) {
+    indexArray.push(i);
+}
+const randomIndexArray = Shuffle(indexArray);
 
+const imgElements = document.querySelectorAll("[class^='image-scenario'");
+console.log(imgElements);
+
+let iterator = 0;
+for (const imgElement of imgElements) {
+    imgElement as HTMLElement;
+    imgElement.setAttribute("data-index", `${randomIndexArray[iterator] + 1}`);
+    iterator++;
+}
+
+
+
+for (let instruction of dataInstructions) {
     const imageDescription = document.createElement("span");
     imageDescription.innerHTML = instruction.value;
     imageDescription.className = "image-description";
@@ -44,8 +61,6 @@ while( blocGeneratedCounter < protocolQuantity) {
     protocolContainer.appendChild(protocolCounter);
 
     listOfRandomInstruction = [];
-    console.log("——————————");
-    console.log(listOfRandomInstruction);
 
     for (let i = 0; i < instructionQuantityInProtocol; i++) {
         const instruction = document.createElement("p");
@@ -54,9 +69,9 @@ while( blocGeneratedCounter < protocolQuantity) {
         protocolContainer.appendChild(instruction);
     }
 
-    if (blocGeneratedCounter % 8 === 0) {
+    if (blocGeneratedCounter % protocolInPageQuantity === 0) {
         randomProtocolContainer = document.createElement("div");
-        randomProtocolContainer.className = `page-${blocGeneratedCounter + 13}`;
+        randomProtocolContainer.className = `page-${blocGeneratedCounter / protocolInPageQuantity + 18}`;
         randomProtocolContainer_left = document.createElement("div");
         randomProtocolContainer_left.className = "column-left";
         randomProtocolContainer_right = document.createElement("div");
@@ -66,13 +81,11 @@ while( blocGeneratedCounter < protocolQuantity) {
         randomProtocolContainer.appendChild(randomProtocolContainer_right);
     }
 
-    if (blocGeneratedCounter % 8 < 8/2) {
+    if (blocGeneratedCounter % protocolInPageQuantity < protocolInPageQuantity/2) {
         (randomProtocolContainer_left as HTMLElement).appendChild(protocolContainer);
     } else {
         (randomProtocolContainer_right as HTMLElement).appendChild(protocolContainer);
     }
-
-    console.log(blocGeneratedCounter % 8);
 
     blocGeneratedCounter ++;
 }
@@ -82,14 +95,10 @@ function getRandomInstruction(): string {
     let randomIndex = getRandomDataInstructionArrayIndex();
     while ( listOfRandomInstruction.indexOf(randomIndex) !== -1 ) {
 
-        console.log("randomIndex", randomIndex);
-        console.log("is in array", listOfRandomInstruction.indexOf(randomIndex) !== -1);
-
         randomIndex = getRandomDataInstructionArrayIndex();
     }
 
     listOfRandomInstruction.push(randomIndex);
-    console.log(listOfRandomInstruction);
 
     return dataInstructions[ randomIndex ].value;
 }
@@ -97,3 +106,8 @@ function getRandomInstruction(): string {
 function getRandomDataInstructionArrayIndex(): number {
     return Math.floor(Math.random() * dataInstructions.length ) + 0;
 }
+
+function Shuffle(o) {
+    for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+};

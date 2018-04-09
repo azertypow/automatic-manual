@@ -10,5 +10,10 @@
     "node-sass": "^4.8.3",
     "parcel-bundler": "^1.7.0",
     "typescript": "^2.8.1"
+  },
+  "scripts": {
+    "build-dev": "./node_modules/.bin/parcel --out-dir ./dist/ ./dev/index.html",
+    "build": "./node_modules/.bin/parcel build --out-dir dist/ --public-url ./ dev/index.html",
+    "clean": "rm -rf .cache/ && rm -rf dist/"
   }
 }

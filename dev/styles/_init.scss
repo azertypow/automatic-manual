@@ -1,35 +1,28 @@
 @import "params";
 
-@media screen {
-  body {
-    //transform: scale3d(0.5, 0.5, 1);
-    //transform-origin: top left;
-  }
-
-  [class*="page"] {
-    border: solid 1px black;
-  }
-}
-
 @page {
   size: $document-width $document-height;
   margin: 0;
 }
 
-html,
-body {
+@mixin init-display-size {
   position: relative;
   display: block;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Akzidenz-Grotesk", sans-serif;
-  -webkit-font-smoothing: auto !important;
+}
+
+html,
+body {
+  @include init-display-size;
   font-size: 9pt;
+  -webkit-font-smoothing: auto !important;
+  font-family: "Akzidenz-Grotesk", sans-serif;
 }
 
 [class*="page"] {
-  @extend html;
+  @include init-display-size;
   height: calc( 21cm - 2px);
   page-break-after: always;
   width: $document-width;
