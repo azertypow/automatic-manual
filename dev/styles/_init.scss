@@ -1,4 +1,5 @@
 @import "params";
+@import "fonts-style";
 
 @page {
   size: $document-width $document-height;
@@ -17,6 +18,7 @@ html,
 body {
   @include init-display-size;
   font-size: 9pt;
+  line-height: 10pt;
   -webkit-font-smoothing: auto !important;
   font-family: "Akzidenz-Grotesk", sans-serif;
 }
@@ -33,32 +35,40 @@ body {
     content: counter(page-counter);
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
     width: 100%;
-    text-align: left;
+    text-align: right;
     font-size: 8pt;
-    padding: 1cm;
+    padding-right: $document-padding-right;
+    padding-bottom: $document-padding-bottom / 2;
     line-height: 0;
     box-sizing: border-box;
   }
 }
 
 h1 {
-  font-size: 3em;
-  font-family: "Akzidenz-Grotesk-medium";
+  @include font-title;
 }
 
 h2 {
-  font-size: 16pt;
-  font-weight: 400;
+  @include font-subtitle;
 }
 
 h2.variante {
-  font-family: "Cira";
+  font-family: "Cira", sans-serif;
 }
 
 h4 {
-  font-family: "Akzidenz-Grotesk-medium";
+  font-family: "Akzidenz-Grotesk-medium", sans-serif;
+}
+
+p {
+  font-family: "Founders Grotesk";
+  font-weight: 400;
+  margin: 0;
+  .line {
+    display: block;
+  }
 }
 
 ol {
@@ -96,6 +106,14 @@ ol {
   }
 }
 
+.image-block {
+  position: absolute;
+  overflow: hidden;
+  img {
+    position: absolute;
+  }
+}
+
 [class*="image-scenario"] {
   margin-bottom: 20pt;
   height: calc(50% - 20pt);
@@ -117,12 +135,6 @@ ol {
 .espace-fine {
   display: inline-block;
   width: 0.1em;
-}
-
-p {
-  .line {
-    display: block;
-  }
 }
 
 .list-right-style {

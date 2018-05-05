@@ -1,0 +1,20 @@
+@mixin font-title {
+  font-family: "Fugue headline", sans-serif;
+  font-size: 18pt;
+  line-height: 1em;
+  margin: 0;
+}
+
+@mixin font-subtitle {
+  font-family: "Fugue headline", sans-serif;
+  font-size: 11pt;
+  line-height: 1em;
+  margin: 0;
+}
+
+@mixin font-number-regular {
+  font-family: "Fugue regular", sans-serif;
+  font-size: 9pt;
+  line-height: 1em;
+  margin: 0;
+}

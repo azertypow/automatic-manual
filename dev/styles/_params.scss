@@ -1,3 +1,7 @@
-$document-padding: 1cm;
+$document-padding-top: 21mm;
+$document-padding-right: 12.7mm;
+$document-padding-bottom: 12.7mm;
+$document-padding-left: 12.7mm;
+$document-padding: $document-padding-top $document-padding-right $document-padding-bottom $document-padding-left;
 $document-width: 14.85cm;
 $document-height: 21cm;

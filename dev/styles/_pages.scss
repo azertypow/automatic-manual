@@ -1,4 +1,5 @@
 @import "./params";
+@import "./fonts-style";
 
 @mixin disable-page-counter {
   &:after {
@@ -6,56 +7,164 @@
   }
 }
 
-.page-1 {
-  .title {
-    margin-top: 40pt;
-    text-align: center;
-    margin-bottom: -1pt;
-  }
-  h2 {
-    margin-top: 0;
-    text-align: center;
-  }
-  .code-barre {
-    width: 30mm;
-    height: auto;
-    transform: translate(215pt, -24pt);
-  }
+@mixin include-top-color {
 
+}
+
+.page-1 {
+  padding: 0;
+  .image {
+    background-image: url("../images/TEST_COUVERTURE_BRUIT_cb.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0px -8px;
+  }
+  @include disable-page-counter;
+}
+
+.page-dos-couve {
+  @include disable-page-counter;
+}
+
+.page-intro {
   @include disable-page-counter;
 }
 
 .page-2 {
-  @include disable-page-counter;
+  .title {
+    position: absolute;
+    top: 188mm;
+    left: 7.5mm;
+    transform-origin: top left;
+    transform: rotate3d(0, 0, -1, 90deg);
+  }
+  .description {
+    .text {
+      position: absolute;
+
+      &:nth-child(1) {
+        top: 45.62mm;
+        left: 12.7mm;
+      }
+      &:nth-child(2) {
+        top: 76.012mm;
+        left: 77.383mm;
+      }
+      &:nth-child(3) {
+        top: 106.392mm;
+        left: 12.7mm;
+      }
+      &:nth-child(4) {
+        top: 136.953mm;
+        left: 48.467mm;
+      }
+      &:nth-child(5) {
+        top: 184.228mm;
+        left: 79.5mm;
+      }
+      .number-ref {
+        @include font-number-regular;
+      }
+    }
+  }
+
+  .image-container {
+    .image-block {
+      &:nth-child(1) {
+        width: 46.017mm;
+        height: 33.754mm;
+        top: $document-padding-top;
+        right: $document-padding-right;
+        > img {
+          left: -60.767mm;
+          top: -24.436mm;
+          width: 117.533mm;
+          height: auto;
+        }
+      }
+      &:nth-child(2) {
+        left: 0;
+        top: 38mm;
+        width: 33.25mm;
+        height: 48mm;
+        > img {
+          left: -36mm;
+          top: -15mm;
+          width: 80.75mm;
+          height: auto;
+        }
+      }
+      &:nth-child(3) {
+        left: 82.75mm;
+        top: 112.09mm;
+        width: 32mm;
+        height: 37.91mm;
+        > img {
+          left: -18.814mm;
+          top: -26.09mm;
+          width: 96.612mm;
+          height: auto;
+        }
+      }
+      &:nth-child(4) {
+        left: 38.25mm;
+        bottom: 43mm;
+        width: 30.114mm;
+        height: 33.25mm;
+        transform-origin: bottom left;
+        transform: rotate3d(0, 0, 1, 90deg);
+        > img {
+          left: -12.3mm;
+          top: -22.1mm;
+          width: 78.267mm;
+          height: auto;
+        }
+      }
+    }
+  }
 }
 
 .page-3 {
-  counter-reset: page-counter 0;
-  text-align: right;
-
-  h1 {
-    font-family: "Akzidenz-Grotesk-medium";
-  }
-
-  .sub-title {
-    font-size: 3em;
-  }
-
-  .footer-note {
+  .text-container {
     position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 7pt;
-    box-sizing: border-box;
-    padding: $document-padding;
+    width: 67mm;
+    left: 33.25mm;
+    top: 95.59mm;
+    p + p {
+      text-indent: 2mm;
+    }
+  }
 
-    .icon-read {
-      width: 4mm;
-      vertical-align: middle;
-      margin-right: 1em;
-      margin-bottom: 0.3em;
+  .image-container {
+    .image-block {
+      &:nth-child(1) {
+        left: $document-padding-left;
+        top: 54.961mm;
+        width: 37.91mm;
+        height: 23.449mm;
+        > img {
+          left: -61.623mm;
+          top: -52.961mm;
+          width: 96.612mm;
+          transform: rotate3d(0, 0, 1, 90deg);
+          height: auto;
+        }
+      }
+      &:nth-child(2) {
+        right: 0;
+        top: 139.177mm;
+        width: 38.5mm;
+        height: 48mm;
+        > img {
+          left: -45.623mm;
+          top: -85.961mm;
+          width: 114.91mm;
+          transform: rotate3d(0, 0, 1, 180deg);
+          height: auto;
+        }
+      }
     }
   }
 }

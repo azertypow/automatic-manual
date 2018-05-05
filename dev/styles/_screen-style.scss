@@ -24,13 +24,12 @@
   //.blanche {
   //  display: none;
   //}INJECT_JAUNE
+  body {
+    background: black;
+  }
 
-}
-
-body {
-  background: black;
-}
-
-[class*="page"] {
-  background: white;
+  [class*="page"] {
+    background: white;
+    margin-bottom: 10px;
+  }
 }
