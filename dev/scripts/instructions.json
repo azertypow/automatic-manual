@@ -1,62 +1,62 @@
 [
   {
     "img": 1,
-    "value": "Plier dans la verticalité la feuille avant de la placer dans l’imprimante."
+    "value": "Injecter de l'encre magenta dans la cartouche d'encre jaune."
   },
   {
     "img": 2,
-    "value": "Scottcher un pinceau imbibé de peinture sur le charriot d’impression."
-  },
-  {
-    "img": 3,
-    "value": "Générer plusieurs impressions sur une même page en changeant l’orientation de la page."
-  },
-  {
-    "img": 4,
-    "value": "Retirer les cartouches d’encre jaune et noire."
-  },
-  {
-    "img": 5,
-    "value": "Plier dans l’horizontalité la feuille avant de la placer dans l’imprimante."
-  },
-  {
-    "img": 6,
     "value": "Bloquer la descente du papier manuellement."
   },
   {
+    "img": 3,
+    "value": "Insérer un format A1 dans l'imprimante."
+  },
+  {
+    "img": 4,
+    "value": "Bouger le chariot de droite à gauche au cours de l'impression."
+  },
+  {
+    "img": 5,
+    "value": "Plier dans l'horizontalité la feuille avant de la placer dans l'imprimante."
+  },
+  {
+    "img": 6,
+    "value": "Injecter de l'encre cyan dans la cartouche magenta."
+  },
+  {
     "img": 7,
-    "value": "Accélérer la sortie du papier en tirant dessus."
+    "value": "Exercer une pression sur le chariot d'impression."
   },
   {
     "img": 8,
-    "value": "Exercer une pression sur le charriot d’impression."
-  },
-  {
-    "img": 9,
-    "value": "Bouger le charriot de droite vers la gauche au cours de l’impression."
-  },
-  {
-    "img": 10,
-    "value": "Pendant l’impression, maintenir appuyer le boutton Power."
-  },
-  {
-    "img": 11,
-    "value": "Injecter de l’encre cyan dans la cartouche majenta."
-  },
-  {
-    "img": 12,
     "value": "Insérer du papier craft."
   },
   {
+    "img": 9,
+    "value": "Injecter de l'encre sur le papier avant son passage sous le rouleau de l'imprimante."
+  },
+  {
+    "img": 10,
+    "value": "Scotcher un pinceau imbibé de peinture sur le chariot d'impression."
+  },
+  {
+    "img": 11,
+    "value": "Générer plusieurs impressions sur une même page."
+  },
+  {
+    "img": 12,
+    "value": "Retirer les cartouches d'encre jaune et noire."
+  },
+  {
     "img": 13,
-    "value": "Injecter de l’encre sur le papier avant son passage sous le rouleau de l’imprimante."
+    "value": "Plier dans la verticalité la feuille avant de la placer dans l'imprimante."
   },
   {
     "img": 14,
-    "value": "Insérer un format A1 plié en trois dans l’imprimante"
+    "value": "Pendant l'impression, maintenir appuyé le bouton «<span class='espace-fine'></span>power<span class='espace-fine'></span>»."
   },
   {
     "img": 15,
-    "value": "Injecter de l’encre magenta dans la cartouche d’encre jaune."
+    "value": "Accélérer la sortie du papier en tirant dessus."
   }
 ]

@@ -1,6 +1,6 @@
-const protocolQuantity = 48;
+const protocolQuantity = 60;
 const instructionQuantityInProtocol = 3;
-const protocolInPageQuantity = 8;
+const protocolInPageQuantity = 10;
 
 declare function require (url: string): void;
 
@@ -12,24 +12,38 @@ for (let i = 0; i < dataInstructions.length; i++) {
 }
 const randomIndexArray = Shuffle(indexArray);
 
-const imgElements = document.querySelectorAll("[class^='image-scenario'");
-console.log(imgElements);
+const imgContainers = document.querySelectorAll("[data-index]");
+console.log(imgContainers);
 
 let iterator = 0;
-for (const imgElement of imgElements) {
-    imgElement as HTMLElement;
-    imgElement.setAttribute("data-index", `${randomIndexArray[iterator] + 1}`);
+for (const imgContainer of imgContainers) {
+    (imgContainer as HTMLElement).setAttribute("data-index", `${randomIndexArray[iterator] + 1}`);
+
     iterator++;
 }
 
+let instructionIterator = 0;
+for(const dataInstruction: {image: string, value: string} of dataInstructions){
+    const container = imgContainers[instructionIterator] as HTMLDivElement;
 
+    dataInstructions[instructionIterator].url = container.querySelector("img").src;
+
+    instructionIterator++;
+}
 
 for (let instruction of dataInstructions) {
-    const imageDescription = document.createElement("span");
-    imageDescription.innerHTML = instruction.value;
-    imageDescription.className = "image-description";
+    const randomImageContainer = document.querySelector(`[data-index="${instruction.img}"]`);
 
-    document.querySelector(`[data-index="${instruction.img}"]`).appendChild(imageDescription);
+    const image = randomImageContainer.querySelector("img");
+    image.src = instruction.url;
+
+    const imageDescription = document.createElement("div");
+    imageDescription.innerHTML = instruction.value;
+    imageDescription.className = "legende";
+
+
+    randomImageContainer.appendChild(image);
+    randomImageContainer.appendChild(imageDescription);
 }
 
 let blocGeneratedCounter = 0;
@@ -65,18 +79,29 @@ while( blocGeneratedCounter < protocolQuantity) {
     for (let i = 0; i < instructionQuantityInProtocol; i++) {
         const instruction = document.createElement("p");
 
-        instruction.innerText = getRandomInstruction();
+        instruction.innerHTML = getRandomInstruction();
         protocolContainer.appendChild(instruction);
     }
 
     if (blocGeneratedCounter % protocolInPageQuantity === 0) {
         randomProtocolContainer = document.createElement("div");
         randomProtocolContainer.className = `page-${blocGeneratedCounter / protocolInPageQuantity + 18}`;
+
+        document.querySelector(".random-protocol-container").appendChild(randomProtocolContainer);
+
+        if(blocGeneratedCounter === 0){
+            const randomProtocolTitle = document.createElement("h2");
+            randomProtocolTitle.innerHTML = "PROTOCOLES ALÉATOIRES";
+            randomProtocolTitle.className = "random-protocol-title";
+            randomProtocolContainer.appendChild(randomProtocolTitle);
+        }
+
         randomProtocolContainer_left = document.createElement("div");
         randomProtocolContainer_left.className = "column-left";
+
         randomProtocolContainer_right = document.createElement("div");
         randomProtocolContainer_right.className = "column-right";
-        document.querySelector(".random-protocol-container").appendChild(randomProtocolContainer);
+
         randomProtocolContainer.appendChild(randomProtocolContainer_left);
         randomProtocolContainer.appendChild(randomProtocolContainer_right);
     }

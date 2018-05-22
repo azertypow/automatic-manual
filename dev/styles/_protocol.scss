@@ -1,12 +1,28 @@
+@import "params";
+
 .random-protocol-container {
+  .random-protocol-title {
+    position: absolute;
+    top: $document-padding-top;
+    left: $document-padding-left;
+  }
+
   .column-left,
   .column-right {
     float: left;
     width: 50%;
     box-sizing: border-box;
-    padding-left: 0.75cm;
-    padding-right: 0.75cm;
-    padding-top: 1cm;
+    padding-top: 22.292mm;
+  }
+
+  .column-left {
+    padding-left: 13.875mm;
+    padding-right: 8.205mm;
+  }
+
+  .column-right {
+    padding-left: 8.205mm;
+    padding-right: 13.875mm;
   }
 
   .protocole-counter-container {
@@ -18,7 +34,7 @@
     line-height: 0.3em;
     box-sizing: border-box;
     vertical-align: bottom;
-    font-family: "GT-America-medium";
+    font-family: "GT-America-medium", sans-serif;
     margin-left: 0.2em;
     //font-feature-settings: "aalt" 4;
     position: relative;
@@ -48,7 +64,7 @@
     //overflow: hidden;
 
     + .protocol-container {
-      margin-top: 2.5em;
+      margin-top: .75em;
     }
 
     h4 {
@@ -58,18 +74,20 @@
     }
 
     p {
-      font-family: "Akzidenz-Grotesk-light";
+      font-family: "Founders Grotesk", sans-serif;
+      font-weight: 300;
       font-size: 8pt;
+      line-height: 8.5pt;
       margin: 0;
       padding-left: 2mm;
     }
 
     h4 + p {
-      margin-top: 0.6em;
+      margin-top: 0.4em;
     }
 
     p+p {
-      margin-top: 1em;
+      margin-top: 0.45em;
     }
   }
 }

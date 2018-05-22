@@ -17,8 +17,8 @@
 html,
 body {
   @include init-display-size;
-  font-size: 9pt;
-  line-height: 10pt;
+  font-size: 10pt;
+  line-height: 11.3pt;
   -webkit-font-smoothing: auto !important;
   font-family: "Akzidenz-Grotesk", sans-serif;
 }
@@ -30,6 +30,7 @@ body {
   width: $document-width;
   padding: $document-padding;
   counter-increment: page-counter 1;
+  overflow: hidden;
 
   &:after {
     content: counter(page-counter);
@@ -43,6 +44,17 @@ body {
     padding-bottom: $document-padding-bottom / 2;
     line-height: 0;
     box-sizing: border-box;
+  }
+
+  background-size: 90% auto;
+  background-position: 50% 11pt;
+  background-repeat: no-repeat;
+
+  &:nth-child(1n + 1):not(.no-repere) {
+    background-image: url("../images/trait_de_coupe.jpg");
+  }
+  &:nth-child(2n):not(.no-repere) {
+    background-image: url("../images/trait_de_coupe_GAUCHE.jpg");
   }
 }
 
@@ -63,7 +75,7 @@ h4 {
 }
 
 p {
-  font-family: "Founders Grotesk";
+  font-family: "Founders Grotesk", sans-serif;
   font-weight: 400;
   margin: 0;
   .line {

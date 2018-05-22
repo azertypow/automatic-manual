@@ -30,6 +30,28 @@
 
 .page-intro {
   @include disable-page-counter;
+  .footer-note {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 7pt;
+    box-sizing: border-box;
+    padding: $document-padding;
+
+    .icon-read {
+      width: 4mm;
+      vertical-align: middle;
+      margin-right: 1em;
+      margin-bottom: 0.3em;
+    }
+
+    .alignement-correction {
+      display: inline-block;
+      width: 1.5em;
+    }
+  }
 }
 
 .page-2 {
@@ -49,7 +71,7 @@
         left: 12.7mm;
       }
       &:nth-child(2) {
-        top: 76.012mm;
+        top: 70.08mm;
         left: 77.383mm;
       }
       &:nth-child(3) {
@@ -129,11 +151,11 @@
 .page-3 {
   .text-container {
     position: absolute;
-    width: 67mm;
-    left: 33.25mm;
-    top: 95.59mm;
+    width: 88.25mm;
+    left: 35.388mm;
+    top: 70.08mm;
     p + p {
-      text-indent: 2mm;
+      margin-top: 0.5em;
     }
   }
 
@@ -142,11 +164,11 @@
       &:nth-child(1) {
         left: $document-padding-left;
         top: 54.961mm;
-        width: 37.91mm;
-        height: 23.449mm;
+        width: 32mm;
+        height: 24mm;
         > img {
           left: -61.623mm;
-          top: -52.961mm;
+          top: -35.961mm;
           width: 96.612mm;
           transform: rotate3d(0, 0, 1, 90deg);
           height: auto;
@@ -154,12 +176,12 @@
       }
       &:nth-child(2) {
         right: 0;
-        top: 139.177mm;
+        top: 150mm;
         width: 38.5mm;
-        height: 48mm;
+        height: 47.177mm;
         > img {
           left: -45.623mm;
-          top: -85.961mm;
+          top: -96.961mm;
           width: 114.91mm;
           transform: rotate3d(0, 0, 1, 180deg);
           height: auto;
@@ -169,7 +191,359 @@
   }
 }
 
-.page-5,
+.page-4 {
+  .image-container {
+    position: absolute;
+    left: 0;
+    top: 71.667mm;
+    img {
+      width: 135.3mm;
+      height: auto;
+    }
+    .legende {
+      position: relative;
+      z-index: 100;
+      white-space: nowrap;
+      font-family: "Founders Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: 8pt;
+      text-align: right;
+    }
+  }
+}
+
+.page-5 {
+  .image-container:nth-child(1) {
+    position: absolute;
+    right: 0;
+    top: $document-padding-top;
+    img {
+      width: 114.75mm;
+      height: auto;
+    }
+    .legende {
+      position: absolute;
+      z-index: 100;
+      white-space: nowrap;
+      $line-height: 13pt;
+      font-family: "Founders Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: 8pt;
+      line-height: $line-height;
+      top: 0;
+      left: 0;
+      transform: translate( calc(-100% - #{$line-height}), 0) rotate(-90deg);
+      transform-origin: top right;
+    }
+  }
+
+  .image-container:nth-child(2) {
+    position: absolute;
+    left: $document-padding-left;
+    bottom: $document-padding-bottom;
+    img {
+      width: 76.5mm;
+      height: auto;
+    }
+    .legende {
+      position: relative;
+      z-index: 100;
+      white-space: nowrap;
+      $line-height: 12pt;
+      font-family: "Founders Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: 8pt;
+      line-height: $line-height;
+      text-align: right;
+    }
+  }
+
+}
+
+.page-6 {
+  .image-container {
+    position: absolute;
+    left: 0;
+    bottom: $document-padding-bottom;
+    img {
+      width: 114.75mm;
+      height: auto;
+    }
+    .legende {
+      position: relative;
+      z-index: 100;
+      white-space: nowrap;
+      $line-height: 12pt;
+      font-family: "Founders Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: 8pt;
+      line-height: $line-height;
+      text-align: right;
+    }
+  }
+}
+
+.page-7 {
+  .image-container:nth-child(1) {
+    position: absolute;
+    right: 0;
+    top: $document-padding-top;
+    img {
+      width: 114.75mm;
+      height: auto;
+    }
+    .legende {
+      position: absolute;
+      z-index: 100;
+      white-space: nowrap;
+      $line-height: 13pt;
+      font-family: "Founders Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: 8pt;
+      line-height: $line-height;
+      top: 0;
+      left: 0;
+      transform: translate( calc(-100% - #{$line-height}), 0) rotate(-90deg);
+      transform-origin: top right;
+    }
+  }
+
+  .image-container:nth-child(2) {
+    position: absolute;
+    left: 39.25mm;
+    top: 95.163mm;
+    img {
+      width: 75.5mm;
+      height: auto;
+    }
+    .legende {
+      position: relative;
+      z-index: 100;
+      white-space: nowrap;
+      $line-height: 12pt;
+      font-family: "Founders Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: 8pt;
+      line-height: $line-height;
+      text-align: right;
+    }
+  }
+}
+
+.page-8 {
+  .image-container {
+    position: absolute;
+    left: $document-padding-left;
+    top: 50.833mm;
+    img {
+      width: 117.75mm;
+      height: auto;
+    }
+    .legende {
+      position: relative;
+      z-index: 100;
+      white-space: nowrap;
+      $line-height: 12pt;
+      font-family: "Founders Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: 8pt;
+      line-height: $line-height;
+      text-align: right;
+    }
+  }
+}
+
+.page-9 {
+  .image-container:nth-child(1) {
+    position: absolute;
+    right: $document-padding-right;
+    top: $document-padding-top;
+    img {
+      width: 76.5mm;
+      height: auto;
+    }
+    .legende {
+      position: absolute;
+      z-index: 100;
+      white-space: nowrap;
+      $line-height: 13pt;
+      font-family: "Founders Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: 8pt;
+      line-height: $line-height;
+      top: 0;
+      left: 0;
+      transform: translate( calc(-100% - #{$line-height}), 0) rotate(-90deg);
+      transform-origin: top right;
+    }
+  }
+  .image-container:nth-child(2) {
+    $line-height: 13pt;
+    position: absolute;
+    left: $document-padding-right + $line-height;
+    bottom: $document-padding-bottom;
+    img {
+      width: 135.55mm;
+      height: auto;
+    }
+    .legende {
+      z-index: 100;
+      white-space: nowrap;
+      font-family: "Founders Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: 8pt;
+      line-height: $line-height;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate( calc(-100% - #{$line-height}), 0) rotate(-90deg);
+      transform-origin: top right;
+    }
+  }
+}
+
+.page-10{
+  .image-container:nth-child(1) {
+    position: absolute;
+    left: 0;
+    top: $document-padding-top;
+    img {
+      width: 114.75mm;
+      height: auto;
+    }
+    .legende {
+      z-index: 100;
+      white-space: nowrap;
+      $line-height: 17pt;
+      font-family: "Founders Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: 8pt;
+      line-height: $line-height;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: rotate(-90deg);
+      transform-origin: top right;
+    }
+  }
+  .image-container:nth-child(2) {
+    $line-height: 13pt;
+    position: absolute;
+    right: $document-padding-right;
+    top: 102.5mm;
+    img {
+      width: 76.5mm;
+      height: auto;
+    }
+    .legende {
+      position: relative;
+      z-index: 100;
+      white-space: nowrap;
+      font-family: "Founders Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: 8pt;
+      line-height: $line-height;
+      text-align: right;
+    }
+  }
+}
+
+.page-11{
+  .image-container {
+    position: absolute;
+    right: 0;
+    top: 102.808mm;
+    img {
+      width: 115mm;
+      height: auto;
+    }
+    .legende {
+      position: absolute;
+      z-index: 100;
+      white-space: nowrap;
+      $line-height: 13pt;
+      font-family: "Founders Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: 8pt;
+      line-height: $line-height;
+      top: 0;
+      left: 0;
+      transform: translate( calc(-100% - #{$line-height}), 0) rotate(-90deg);
+      transform-origin: top right;
+    }
+  }
+}
+
+.page-12{
+  .image-container:nth-child(1) {
+    $line-height: 13pt;
+    position: absolute;
+    left: 0;
+    bottom: 17.833mm;
+    img {
+      width: 102.5mm;
+      height: auto;
+    }
+    .legende {
+      position: relative;
+      z-index: 100;
+      white-space: nowrap;
+      font-family: "Founders Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: 8pt;
+      line-height: $line-height;
+      text-align: right;
+    }
+  }
+  .image-container:nth-child(2) {
+    position: absolute;
+    right: $document-padding-right;
+    top: $document-padding-top;
+    img {
+      width: 76.5mm;
+      height: auto;
+    }
+    .legende {
+      position: relative;
+      z-index: 100;
+      white-space: nowrap;
+      $line-height: 13pt;
+      font-family: "Founders Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: 8pt;
+      line-height: $line-height;
+      text-align: right;
+    }
+  }
+}
+
+.page-13{
+  .image-container {
+    position: absolute;
+    left: $document-padding-left;
+    bottom: $document-padding-bottom;
+    img {
+      width: 116mm;
+      height: auto;
+    }
+    .legende {
+      position: absolute;
+      z-index: 100;
+      white-space: nowrap;
+      $line-height: 17pt;
+      font-family: "Founders Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: 8pt;
+      line-height: $line-height;
+      top: 0;
+      right: 0;
+      transform: translate( 0, 0) rotate(-90deg);
+      transform-origin: top right;
+    }
+  }
+}
+
+
 .page-23 {
 
   p.main {
