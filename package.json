@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build-dev": "./node_modules/.bin/parcel --out-dir ./dist/ ./dev/index.html",
-    "build": "./node_modules/.bin/parcel build --out-dir dist/ --public-url ./ dev/index.html",
-    "clean": "rm -rf .cache/ && rm -rf dist/"
+    "build": "./node_modules/.bin/parcel build --out-dir dist/ --public-url ./ dev/index.html && zip -r dist.zip dist && open .",
+    "clean": "rm -rf .cache/ && rm -rf dist/ && rm -rf dist.zip"
   }
 }
