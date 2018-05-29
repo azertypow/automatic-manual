@@ -545,19 +545,508 @@
 
 
 .page-23 {
-
-  p.main {
-    columns: 2;
-    padding: $document-padding;
-    padding-left: 2.5cm;
-    column-gap: 10mm;
+  .main {
+    font-family: "Founders Grotesk", sans-serif;
+    font-weight: 400;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    top: 64.644mm;
+    left: 32.625mm;
+    width: 77.75mm;
+    .saut-ligne {
+      font-size: 10pt;
+      line-height: 9pt;
+    }
+  }
+  .image-container:nth-child(1) {
+    position: absolute;
+    top: 54.667mm;
+    right: 12.7mm;
+    width: 34.15mm;
+    height: 24.2mm;
+    overflow: hidden;
+      img {
+        position: absolute;
+        width: 88.725mm;
+        height: auto;
+        left: -20.875mm;
+        top: -62.5mm;
+      }
+  }
+  .image-container:nth-child(2) {
+    position: absolute;
+    bottom: $document-padding-bottom;
+    left: 0;
+    width: 20.25mm;
+    height: 60.532mm;
+    overflow: hidden;
+    img {
+      position: absolute;
+      width: 122.581mm;
+      height: auto;
+      left: -75mm;
+      top: -17.2mm;
+      transform: rotate(-180deg);
+    }
   }
 }
 
-.page-25,
+.page-24 {
+  .image-ended:nth-child(1) {
+    bottom: $document-padding-bottom;
+    left: 38.25mm;
+    height: 125.633mm;
+    width: 90.083mm;
+    .image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      img {
+        position: absolute;
+        width: 92.183mm;
+        height: auto;
+        left: -7px;
+        top: 0;
+      }
+    }
+    .number {
+      font-family: "Fugue regular", sans-serif;
+      bottom: -1pt;
+      right: -20pt;
+    }
+  }
+}
+
+.page-25 {
+  .image-ended:nth-child(1) {
+    top: $document-padding-top;
+    left: 0;
+    height: 105.46mm;
+    width: 76.533mm;
+    .image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      img {
+        position: absolute;
+        width: 78.629mm;
+        height: auto;
+        left: -2pt;
+        top: 0;
+      }
+    }
+    .number {
+      bottom: -1pt;
+      right: -20pt;
+    }
+  }
+  .image-ended:nth-child(2) {
+    bottom: $document-padding-bottom;
+    left: calc(100% - #{$document-padding-right});
+    height: 81.783mm;
+    width: 60.245mm;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    .image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      img {
+        position: absolute;
+        width: 60.245mm;
+        height: auto;
+        left: 0;
+        top: -6px;
+      }
+    }
+    .number {
+      bottom: -1pt;
+      right: -20pt;
+    }
+  }
+}
+
 .page-26 {
+  .image-ended:nth-child(1) {
+    top: $document-padding-top;
+    left: 100%;
+    height: 92.28mm;
+    width: 65.493mm;
+    transform: rotate(90deg);
+    transform-origin: top left;
+    .image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      img {
+        position: absolute;
+        width: 70.311mm;
+        height: auto;
+        left: -10pt;
+        top: 0;
+      }
+    }
+    .number {
+      bottom: -1pt;
+      right: -20pt;
+    }
+  }
+  .image-ended:nth-child(2) {
+    bottom: $document-padding-bottom;
+    left: $document-padding-left;
+    height: 93.83mm;
+    width: 63.8mm;
+    .image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      img {
+        position: absolute;
+        width: 71.144mm;
+        height: auto;
+        left: -3.672mm;
+        top: 0;
+      }
+    }
+    .number {
+      bottom: -1pt;
+      right: -20pt;
+    }
+  }
+}
+
+.page-27 {
+  .text-container {
+    position: absolute;
+    width: 162.381mm;
+    height: 96.139mm;
+    top: calc(100% - 26.619mm);
+    left: $document-padding-left;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+
+    .text {
+      font-family: "Founders Grotesk", sans-serif;
+      font-size: 41pt;
+      line-height: 40pt;
+
+      & + .text {
+        margin-top: 0.75em;
+      }
+    }
+
+    .text:nth-child(1) {
+      &:before {
+        position: absolute;
+        content: '1';
+        left: -12.5pt;
+        transform-origin: top left;
+        transform: rotate(90deg);
+        font-size: 24pt;
+        font-family: "Fugue headline", sans-serif;
+      }
+    }
+
+    .text:nth-child(2) {
+      &:before {
+        position: absolute;
+        content: '2';
+        left: -12.5pt;
+        transform-origin: top left;
+        transform: rotate(90deg);
+        font-size: 24pt;
+        font-family: "Fugue headline", sans-serif;
+      }
+    }
+  }
+}
+
+.page-28 {
+  .text-container {
+    position: absolute;
+    width: 162.381mm;
+    height: 96.139mm;
+    top: calc(100% - 26.619mm);
+    left: $document-padding-left;
+    transform: rotate(-90deg) translate(0, -7em);
+    transform-origin: top left;
+
+    .text {
+      font-family: "Founders Grotesk", sans-serif;
+      font-size: 41pt;
+      line-height: 40pt;
+
+      & + .text {
+        margin-top: 0.75em;
+      }
+    }
+
+    .text:nth-child(1) {
+      &:before {
+        position: absolute;
+        content: '2';
+        left: -12.5pt;
+        transform-origin: top left;
+        transform: rotate(90deg);
+        font-size: 24pt;
+        font-family: "Fugue headline", sans-serif;
+      }
+    }
+
+    .text:nth-child(2) {
+      &:before {
+        position: absolute;
+        content: '3';
+        left: -12.5pt;
+        transform-origin: top left;
+        transform: rotate(90deg);
+        font-size: 24pt;
+        font-family: "Fugue headline", sans-serif;
+      }
+    }
+  }
+}
+
+.page-29 {
+  .text-container {
+    position: absolute;
+    width: 162.381mm;
+    height: 96.139mm;
+    top: calc(100% - 26.619mm);
+    left: $document-padding-left;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+
+    .text {
+      font-family: "Founders Grotesk", sans-serif;
+      font-size: 41pt;
+      line-height: 40pt;
+
+      & + .text {
+        margin-top: 0.75em;
+      }
+    }
+
+    .text:nth-child(1) {
+      &:before {
+        position: absolute;
+        content: '';
+        left: -12.5pt;
+        transform-origin: top left;
+        transform: rotate(90deg);
+        font-size: 24pt;
+        font-family: "Fugue headline", sans-serif;
+      }
+    }
+
+    .text:nth-child(2) {
+      &:before {
+        position: absolute;
+        content: '4';
+        left: -12.5pt;
+        transform-origin: top left;
+        transform: rotate(90deg);
+        font-size: 24pt;
+        font-family: "Fugue headline", sans-serif;
+      }
+    }
+  }
+}
+
+.page-30 {
+  .text-container {
+    position: absolute;
+    width: 162.381mm;
+    height: 96.139mm;
+    top: calc(100% - 26.619mm);
+    left: $document-padding-left;
+    transform: rotate(-90deg) translate(0, -15em);
+    transform-origin: top left;
+
+    .text {
+      font-family: "Founders Grotesk", sans-serif;
+      font-size: 41pt;
+      line-height: 40pt;
+
+      & + .text {
+        margin-top: 0.75em;
+      }
+    }
+
+    .text:nth-child(1) {
+      &:before {
+        position: absolute;
+        content: '4';
+        left: -12.5pt;
+        transform-origin: top left;
+        transform: rotate(90deg);
+        font-size: 24pt;
+        font-family: "Fugue headline", sans-serif;
+      }
+    }
+
+    .text:nth-child(2) {
+      &:before {
+        position: absolute;
+        content: '5';
+        left: -12.5pt;
+        transform-origin: top left;
+        transform: rotate(90deg);
+        font-size: 24pt;
+        font-family: "Fugue headline", sans-serif;
+      }
+    }
+  }
+}
+
+.page-31 {
+  .last-img:nth-child(1) {
+    position: absolute;
+    top: 25.839mm;
+    left: 0;
+    width: 61.208mm;
+    height: 44mm;
+    background-size: 100% 100%;
+    background-image: url("../images/IMG_1347.jpg");
+  }
+  .last-img:nth-child(2) {
+    position: absolute;
+    top: 25.839mm;
+    right: $document-padding-right;
+    width: 61.208mm;
+    height: 44mm;
+    background-size: 100% 100%;
+    background-image: url("../images/IMG_1345.jpg");
+  }
+  .last-img:nth-child(3) {
+    position: absolute;
+    top: 83.005mm;
+    left: 0;
+    width: 61.208mm;
+    height: 44mm;
+    background-size: 100% 100%;
+    background-image: url("../images/Links/IMG_1355.jpg");
+  }
+  .last-img:nth-child(4) {
+    position: absolute;
+    top: 83.005mm;
+    right: $document-padding-right;
+    width: 61.208mm;
+    height: 44mm;
+    background-size: 100% 100%;
+    background-image: url("../images/Links/IMG_1360_copie.jpg");
+  }
+  .last-img:nth-child(5) {
+    position: absolute;
+    top: 140.151mm;
+    left: 0;
+    width: 61.208mm;
+    height: 44mm;
+    background-size: 100% 100%;
+    background-image: url("../images/Links/IMG_1356.jpg");
+  }
+  .last-img:nth-child(6) {
+    position: absolute;
+    top: 140.151mm;
+    right: $document-padding-right;
+    width: 61.208mm;
+    height: 44mm;
+    background-size: 100% 100%;
+    background-image: url("../images/Links/IMG_1357.jpg");
+  }
+}
+
+.page-32 {
+  .last-img:nth-child(1) {
+    position: absolute;
+    top: 25.839mm;
+    left: 0;
+    width: 61.208mm;
+    height: 44mm;
+    background-size: 100% 100%;
+    background-image: url("../images/IMG_1346.jpg");
+  }
+  .last-img:nth-child(2) {
+    position: absolute;
+    top: 25.839mm;
+    right: $document-padding-right;
+    width: 61.208mm;
+    height: 44mm;
+    background-size: 100% 100%;
+    background-image: url("../images/IMG_1347.jpg");
+  }
+  .last-img:nth-child(3) {
+    position: absolute;
+    top: 83.005mm;
+    left: 0;
+    width: 61.208mm;
+    height: 44mm;
+    background-size: 100% 100%;
+    background-image: url("../images/Links/IMG_1349.jpg");
+  }
+  .last-img:nth-child(4) {
+    position: absolute;
+    top: 83.005mm;
+    right: $document-padding-right;
+    width: 61.208mm;
+    height: 44mm;
+    background-size: 100% 100%;
+    background-image: url("../images/Links/IMG_1348.jpg");
+  }
+  .last-img:nth-child(5) {
+    position: absolute;
+    top: 140.151mm;
+    left: 0;
+    width: 61.208mm;
+    height: 44mm;
+    background-size: 100% 100%;
+    background-image: url("../images/Links/IMG_1363.jpg");
+  }
+  .last-img:nth-child(6) {
+    position: absolute;
+    top: 140.151mm;
+    right: $document-padding-right;
+    width: 61.208mm;
+    height: 44mm;
+    background-size: 100% 100%;
+    background-image: url("../images/Links/IMG_1359.jpg");
+  }
+}
+
+.page-33 {
+  @include disable-page-counter;
+}
+
+.page-34 {
+  @include disable-page-counter;
+
+  .impressum {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: $document-padding-bottom;
+    font-family: "Founders Grotesk", sans-serif;
+    font-size: 7pt;
+    line-height: 8pt;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+
+.page-35 {
   @include disable-page-counter;
 }
