@@ -1,3 +1,5 @@
+import {barCodeGenerator} from "./barCodeGenerator";
+
 const protocolQuantity = 60;
 const instructionQuantityInProtocol = 3;
 const protocolInPageQuantity = 10;
@@ -136,3 +138,5 @@ function Shuffle(o) {
     for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
 };
+
+barCodeGenerator();
